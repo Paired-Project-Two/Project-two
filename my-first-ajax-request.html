@@ -53,13 +53,15 @@
 
       // console.log(umer);
 
-      const proxiedUrl = "https://www.themuse.com/api/public/jobs?category=Software%20Engineer&location=Toronto%2C%20Canada&page=1&descending=true";
+      const proxiedUrl = "https://www.themuse.com/api/public/jobs";
 
       const url = new URL("http://proxy.hackeryou.com");
       url.search = new URLSearchParams({
         reqUrl: proxiedUrl,
         "params[key]": "f183955631a281249d35061e86b24e1e3faac9f48568a46b70341a667946b131",
-        // "params[page]": 1,
+        "params[page]": 1,
+        "params[level]": "Senior level",
+        "params[category]": "Software Engineer",
         // "params[descending]": true,
         "proxyHeaders[header]": "GET",
       });
