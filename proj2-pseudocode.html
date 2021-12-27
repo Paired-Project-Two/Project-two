@@ -35,14 +35,48 @@
     * 
     * MVP: Developing a job posting aggregator specifically for the tech industry. Users will use a select bar on the landing page that has 10-15 job categories and a submit button. On submit, page will display results, each result will contain job title, company name, job description, starting salary (if available), and company location, as well as an apply button that leads to an external application.
     * 
+<<<<<<< HEAD
+    * Stretch Goals:  Developing a user profile with job skills and history to better recommend and filter job listings to enhance user experience */
+=======
     * Stretch Goals:  
     1) Developing a user profile with job skills and history to better recommend and filter job listings to enhance user experience. 
 
     2) Having recommended course listings to help applicants boost their skills base
 
     3) Listing employer reviews when users click on job listings 
+>>>>>>> 9847bb7a6049993b01fe2bcca5a0470f482bf02b
 
 
+      const proxiedUrl = "https://www.themuse.com/api/public/jobs?category=Software%20Engineer&location=Toronto%2C%20Canada&page=1&descending=true";
+
+      const url = new URL("http://proxy.hackeryou.com");
+      url.search = new URLSearchParams({
+        reqUrl: proxiedUrl,
+        "params[key]": "f183955631a281249d35061e86b24e1e3faac9f48568a46b70341a667946b131",
+        "params[page]": 2,
+        "params[descending]": true,
+        "proxyHeaders[header]": "GET",
+      });
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        });
+
+      // const proxiedUrl =
+      //   "https://coronavirus-tracker-api.herokuapp.com/v2/locations";
+
+      // const url = new URL("http://proxy.hackeryou.com");
+      // url.search = new URLSearchParams({
+      //   reqUrl: proxiedUrl,
+      // });
+
+      // fetch(url)
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     console.log(data.locations);
+      //   });
 
 
   </script>
