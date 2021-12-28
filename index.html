@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+  
+  <header>
+    <div class="wrapper">
+      <h1> </h1>
+      <nav>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrapper">
+
+      <form action="">
+        <label for="job-category">Choose Job Category:</label>
+        <select class="jobCategory" name="job-category" id="job-category">
+          <option value="">Select</option>
+          <option value="Software Engineer">Software Engineer</option>
+          <option value="Data Science"> Data Science</option>
+          <option value="UX">UX</option>   
+          <option value="IT">IT</option> 
+          <option value="Product">Product</option>        
+        </select>
+      
+
+        <label for="job-experience">Choose Job Experience:</label>
+        <select name="job-experience" id="job-experience" class="userLevel">
+          <option value="">Select</option>
+          <option value="Entry%20Level">Entry Level</option>
+          <option value="Mid%20Level">Mid Level</option>
+          <option value="Senior%20Level">Senior Level</option>          
+        </select>
+      
+
+        <h3>Choose Job Location</h3>
+        <label for="cityChoice1">Toronto, Canada
+          <input type="radio" name="city" id="cityChoice1" value="Toronto%2C%20Canada" class="city"></input>
+        </label>
+        <label for="cityChoice2">London, United Kingdom
+          <input type="radio" name="city" id="cityChoice2" value="London%2C%20United%20Kingdom" class="city"></input>
+        </label>
+        <label for="cityChoice3">San Jose, CA
+          <input type="radio" name="city" id="cityChoice3" value="San%20Jose%2C%20CA" class="city"></input>
+        </label>
+        <label for="cityChoice4">New York, NY
+          <input type="radio" name="city" id="cityChoice4" value="New%20York%2C%20NY" class="city"></input>
+        </label>
+        
+        <input type="button" value="Search for Jobs" class="searchButton"></input>
+      </form>
+
+    </div>
+  </section>
+
+
+
+  <script src="./script.js"></script>
+</body>
+</html>
