@@ -28,7 +28,7 @@
 
       <form action="">
         <label for="job-category">Choose Job Category:</label>
-        <select name="job-category" id="job-category">
+        <select class="jobCategory" name="job-category" id="job-category">
           <option value="">Select</option>
           <option value="Software Engineer">Software Engineer</option>
           <option value="Data Science"> Data Science</option>
@@ -39,31 +39,36 @@
       
 
         <label for="job-experience">Choose Job Experience:</label>
-        <select name="job-experience" id="job-experience">
+        <select name="job-experience" id="job-experience" class="userLevel">
           <option value="">Select</option>
-          <option value="Entry Level">Entry Level</option>
-          <option value="Mid Level">Mid Level</option>
-          <option value="Senior Level">Senior Level</option>          
+          <option value="Entry%20Level">Entry Level</option>
+          <option value="Mid%20Level">Mid Level</option>
+          <option value="Senior%20Level">Senior Level</option>          
         </select>
       
 
         <h3>Choose Job Location</h3>
-        <label for="job-location">Toronto, Canada
-          <input type="radio" name="location" id=""></input>
+        <label for="cityChoice1">Toronto, Canada
+          <input type="radio" name="city" id="cityChoice1" value="Toronto%2C%20Canada" class="city"></input>
         </label>
-        <label for="job-location">London, United Kingdom
-          <input type="radio" name="location" id=""></input>
+        <label for="cityChoice2">London, United Kingdom
+          <input type="radio" name="city" id="cityChoice2" value="London%2C%20United%20Kingdom" class="city"></input>
         </label>
-        <label for="job-location">San Jose, CA
-          <input type="radio" name="location" id=""></input>
+        <label for="cityChoice3">San Jose, CA
+          <input type="radio" name="city" id="cityChoice3" value="San%20Jose%2C%20CA" class="city"></input>
         </label>
-        <label for="job-location">New York, NY
-          <input type="radio" name="location" id=""></input>
+        <label for="cityChoice4">New York, NY
+          <input type="radio" name="city" id="cityChoice4" value="New%20York%2C%20NY" class="city"></input>
         </label>
-
-        <input type="submit" value="Search for Jobs">
-             
+        
+        <input type="button" value="Search for Jobs" class="searchButton"></input>
       </form>
+
+      <div class="results">
+        <ul class="listings">
+          
+        </ul>
+      </div>
 
     </div>
   </section>
