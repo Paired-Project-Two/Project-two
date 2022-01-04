@@ -1,9 +1,11 @@
 const jobApp = {};
 
-
+jobApp.init = function()  {
+  jobApp.grabData();
+}
 
 jobApp.proxiedUrl =
-  "https://www.themuse.com/api/public/jobs?category=Software%20Engineer&location=Toronto%2C%20Canada&page=1&descending=true";
+  "https://www.themuse.com/api/public/jobs?page=1&descending=";
 
 const url = new URL("http://proxy.hackeryou.com");
 url.search = new URLSearchParams({
@@ -15,12 +17,23 @@ url.search = new URLSearchParams({
   "proxyHeaders[header]": "GET",
 });
 
-fetch(url)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  });
 
-jopApp.populateSelect = () => {
+jobApp.grabData = () => {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      // console.log(data.results);
+      jobApp.filterResults(data.results);
+    });
   
 }
+
+jobApp.filterResults = (results) => {
+  results.filter((category) => {
+    // console.log(category.sr_name);
+    return category.name = "Software Engineer";
+    
+  }) 
+  console.log(results)
+}
+jobApp.init();
