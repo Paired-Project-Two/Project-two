@@ -7,7 +7,7 @@ jobApp.init = function()  {
 const submitButton = document.querySelector(".searchButton")
 const category = document.querySelector(".jobCategory")
 const level = document.querySelector(".userLevel")
-
+const resultsDiv = document.querySelector('.results');
 
 jobApp.captureUserInput = () => {
   submitButton.addEventListener("click", () => {
@@ -18,6 +18,7 @@ jobApp.captureUserInput = () => {
     console.log(cityChoice)
     const levelChoice = level.value;
     console.log(levelChoice);
+    
     jobApp.insertUserInput(categoryChoice, levelChoice, cityChoice);
   })
 }
@@ -46,14 +47,13 @@ jobApp.insertUserInput = (category, level, city) => {
 
 
 jobApp.filterResults = (results) => {
-
+  
   results.filter((category) => {
     // console.log(category.levels[0].name);
-    const jobLocation = category.locations.forEach((jobLocation) => {
-      return jobLocation
-    })
-    console.log(jobLocation)
-    const results = document.querySelector('.results');
+    
+    
+   
+   
     
     const listings = document.querySelector('.listings');
 
@@ -64,13 +64,15 @@ jobApp.filterResults = (results) => {
     <h3 class='jobTitle'> ${category.name} </h3>
 
     <p class='jobDescription'> ${category.contents} </p>
-
-    <p class='jobLocation'> ${jobLocation} </p>
+    <p class='jobURL'>Job Portal: <a href="${category.refs.landing_page}">Portal Link</a></p>
+    <p class='jobLocation'>Primary Location: </p>
 
     `
 
     listings.appendChild(listing)
-
+    category.locations.forEach((jobLocation) => {
+      listing.innerHTML += `<p>${jobLocation.name}.  </p>`
+    })
 
   }) 
   

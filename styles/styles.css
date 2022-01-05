@@ -201,3 +201,9 @@ template {
 [hidden] {
   display: none;
 }
+
+.wrapper {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
