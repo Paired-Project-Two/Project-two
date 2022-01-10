@@ -14,7 +14,7 @@ jobApp.captureUserInput = () => {
   submitButton.addEventListener("click", () => {
     const city = document.querySelector('input[name="city"]:checked');
     const categoryChoice = category.value;
-    console.log(categoryChoice);
+    // console.log(categoryChoice);
     const cityChoice = city;
     
     const levelChoice = level.value;
@@ -47,7 +47,7 @@ jobApp.captureUserInput = () => {
         document.getElementById("form_error").innerHTML = formApproved;
         document.getElementById("category_error").innerHTML = formApproved; 
     }
-    console.log(cityChoice.value)
+    console.log(formApproved)
     const emptyDiv = "";
     document.querySelector(".listings").innerHTML = emptyDiv;
     jobApp.insertUserInput(categoryChoice, levelChoice, cityChoice.value);
