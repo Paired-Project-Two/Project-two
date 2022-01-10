@@ -9,6 +9,7 @@ const category = document.querySelector(".jobCategory")
 const level = document.querySelector(".userLevel")
 const resultsDiv = document.querySelector('.results');
 
+
 jobApp.captureUserInput = () => {
   submitButton.addEventListener("click", () => {
     const city = document.querySelector('input[name="city"]:checked');
@@ -20,10 +21,12 @@ jobApp.captureUserInput = () => {
     console.log(levelChoice);
     
     if (categoryChoice === "null") {
+      document.querySelector("#category_error").style.display = "block";
       categoryError = "Please select a category";
       document.getElementById("category_error").innerHTML = categoryError;
       formError = "Search missing information, please review selections";
       document.getElementById("form_error").innerHTML = formError;
+      return;
     } else {
       formApproved = "";
       document.getElementById("location_error").innerHTML = formApproved;
@@ -32,6 +35,7 @@ jobApp.captureUserInput = () => {
     }
 
     if (cityChoice === null) {
+      
       cityError = "Please select a city";
       document.getElementById("location_error").innerHTML = cityError;
       formError = "Search missing information, please review selections";

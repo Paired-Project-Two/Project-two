@@ -37,9 +37,9 @@
           </span>
           <div class="singleSelect">
             
-            <label for="job-category">Industry Category</label>
+            <label for="job-category" class="sr-only">Industry Category</label>
             <select class="jobCategory" name="job-category" id="job-category">
-              <option value="null">Select</option>
+              <option value="null">Industry Category</option>
               <option value="Software Engineer">Software Engineer</option>
               <option value="Data Science"> Data Science</option>
               <option value="UX">UX</option>   
@@ -50,20 +50,18 @@
           </div>
         
           <div class="singleSelect">
-            <label for="job-experience">Job Experience</label>
+            <label for="job-experience" class="sr-only">Job Experience</label>
             <select name="job-experience" id="job-experience" class="userLevel" >
-              <option value="null">Select</option>
+              <option value="null">Experience Level</option>
               <option value="Entry%20Level">Entry Level</option>
               <option value="Mid%20Level">Mid Level</option>
               <option value="Senior%20Level">Senior Level</option>          
             </select>
-            <span class="error">
-              <p id="level_error"></p>
-            </span>
+            
           </div>
         </div>
 
-        <h3>Location</h3>
+        <h3 class="sr-only">Location</h3>
         <div class="locationDiv">
 
           <div class="cityDiv">
@@ -77,7 +75,7 @@
           <div class="cityDiv">
             <label for="cityChoice2">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg/1000px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg" alt="City of London skyline" class="cityImg">
-              <p>London, United Kingdom </p>
+              <p>London, UK </p>
               <input type="radio" name="city" id="cityChoice2" value="London%2C%20United%20Kingdom" class="city"></input>
             </label>
           </div>
