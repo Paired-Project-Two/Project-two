@@ -50,7 +50,7 @@ jobApp.filterResults = (results) => {
   results.filter((category) => {
     // console.log(category.levels[0].name);
     const jobLocation = category.locations.forEach((jobLocation) => {
-      return jobLocation
+      console.log(jobLocation)
     })
     console.log(jobLocation)
     const results = document.querySelector('.results');
