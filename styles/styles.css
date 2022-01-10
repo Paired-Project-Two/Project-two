@@ -662,11 +662,18 @@ header {
 }
 
 nav {
-  display: none;
   position: absolute;
   text-align: left;
   top: 100%;
   left: 0;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 nav ul {
@@ -682,7 +689,11 @@ nav li {
 
 nav a {
   text-transform: uppercase;
+  color: #233f57;
   text-decoration: none;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover,
@@ -694,11 +705,7 @@ nav a:focus {
   display: none;
 }
 
-.nav-toggle:checked ~ nav {
-  display: block;
-}
-
-.nav-toggle-lable {
+.nav-toggle-label {
   position: absolute;
   top: 0;
   left: 0;
@@ -712,9 +719,9 @@ nav a:focus {
           align-items: center;
 }
 
-.nav-toggle-lable span,
-.nav-toggle-lable span::before,
-.nav-toggle-lable span::after {
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
   display: block;
   background: #233f57;
   height: 2px;
@@ -723,17 +730,17 @@ nav a:focus {
   position: relative;
 }
 
-.nav-toggle-lable span::before,
-.nav-toggle-lable span::after {
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
   content: "";
   position: absolute;
 }
 
-.nav-toggle-lable span::before {
+.nav-toggle-label span::before {
   bottom: 7px;
 }
 
-.nav-toggle-lable span::after {
+.nav-toggle-label span::after {
   top: 7px;
 }
 
@@ -745,4 +752,62 @@ nav a:focus {
 
 .listings {
   list-style-type: none;
+}
+
+.nav-toggle:checked ~ nav {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-in-out 200ms;
+  transition: opacity 200ms ease-in-out 200ms;
+}
+
+@media (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .header-section {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2/3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3/4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  nav li {
+    margin-bottom: 0;
+    margin-left: 3em;
+  }
+
+  nav a {
+    opacity: 1;
+  }
 }
