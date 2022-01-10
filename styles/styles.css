@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat&family=Quattrocento&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -202,12 +203,113 @@ template {
   display: none;
 }
 
+body {
+  color: #233f57;
+  font-family: "Montserrat", sans-serif;
+  background: #eee0cb;
+  line-height: 1.6;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3 {
+  font-family: "Quattrocento", cursive;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
 .wrapper {
   width: 80%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.listings {
-  list-style-type: none;
+header {
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #000;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ nav {
+  display: block;
+}
+
+.nav-toggle-lable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-toggle-lable span,
+.nav-toggle-lable span::before,
+.nav-toggle-lable span::after {
+  display: block;
+  background: #233f57;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-lable span::before,
+.nav-toggle-lable span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-lable span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-lable span::after {
+  top: 7px;
 }
