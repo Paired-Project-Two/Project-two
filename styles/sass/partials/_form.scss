@@ -155,11 +155,8 @@ p {
         background: #4F5D75;
         color: white;
     }
-    
 }
-input[type="radio"]:checked  {
-    border: 0;
-}
+
 @media (max-width: 1200px) {
     .selectBars {
         flex-direction: column;
@@ -179,4 +176,10 @@ input[type="radio"]:checked  {
     .cityDiv {
         width: 100%;
     }
+}
+@media (max-width: 750px) {
+    .singleSelect, .singleSelect label {
+        width: 100%;
+    }
+
 }
