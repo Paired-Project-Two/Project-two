@@ -1,10 +1,17 @@
 @import "./partials/normalize";
+@import "./partials/form";
 
+// font families 
+// font-family: 'EB Garamond', serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Quattrocento', serif;
 .wrapper {
     width: 80%;
     max-width: 1400px;
     margin: 0 auto;
 }
+
 .listings {
     list-style-type: none;
 }
+

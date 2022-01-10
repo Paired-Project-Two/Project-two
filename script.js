@@ -14,12 +14,39 @@ jobApp.captureUserInput = () => {
     const city = document.querySelector('input[name="city"]:checked');
     const categoryChoice = category.value;
     console.log(categoryChoice);
-    const cityChoice = city.value;
-    console.log(cityChoice)
+    const cityChoice = city;
+    
     const levelChoice = level.value;
     console.log(levelChoice);
     
-    jobApp.insertUserInput(categoryChoice, levelChoice, cityChoice);
+    if (categoryChoice === "null") {
+      categoryError = "Please select a category";
+      document.getElementById("category_error").innerHTML = categoryError;
+      formError = "Search missing information, please review selections";
+      document.getElementById("form_error").innerHTML = formError;
+    } else {
+      formApproved = "";
+      document.getElementById("location_error").innerHTML = formApproved;
+      document.getElementById("form_error").innerHTML = formApproved;
+      document.getElementById("category_error").innerHTML = formApproved;
+    }
+
+    if (cityChoice === null) {
+      cityError = "Please select a city";
+      document.getElementById("location_error").innerHTML = cityError;
+      formError = "Search missing information, please review selections";
+      document.getElementById("form_error").innerHTML = formError;
+      return; 
+    } else {
+        formApproved = "";
+        document.getElementById("location_error").innerHTML = formApproved;
+        document.getElementById("form_error").innerHTML = formApproved;
+        document.getElementById("category_error").innerHTML = formApproved; 
+    }
+    console.log(cityChoice.value)
+    const emptyDiv = "";
+    document.querySelector(".listings").innerHTML = emptyDiv;
+    jobApp.insertUserInput(categoryChoice, levelChoice, cityChoice.value);
   })
 }
 
