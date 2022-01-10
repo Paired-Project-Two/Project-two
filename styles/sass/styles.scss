@@ -1,1 +1,10 @@
-@import "./partials/normalize"
+@import "./partials/normalize";
+
+.wrapper {
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.listings {
+    list-style-type: none;
+}
