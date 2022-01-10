@@ -5,6 +5,21 @@
     background-repeat: no-repeat;
     padding: 100px 0 100px 0; 
 }
+.formSection h2,
+.formSection h3 {
+    text-align: center;
+    color: white;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.formSection h2 {
+    font-size: 20px;
+}
+.formSection h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
 form {
     width: 80%;
     margin: 0 auto;
@@ -139,8 +154,11 @@ p {
         background: #4F5D75;
         color: white;
     }
+    
 }
-
+input[type="radio"]:checked  {
+    border: 0;
+}
 @media (max-width: 1200px) {
     .selectBars {
         flex-direction: column;

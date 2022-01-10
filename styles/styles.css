@@ -224,6 +224,23 @@ template {
   padding: 100px 0 100px 0;
 }
 
+.formSection h2,
+.formSection h3 {
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 5px 0;
+}
+
+.formSection h2 {
+  font-size: 20px;
+}
+
+.formSection h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
 form {
   width: 80%;
   margin: 0 auto;
@@ -377,6 +394,10 @@ p {
 .cityDiv:hover {
   background: #4F5D75;
   color: white;
+}
+
+input[type=radio]:checked {
+  border: 0;
 }
 
 @media (max-width: 1200px) {
@@ -744,16 +765,6 @@ nav a:focus {
   top: 7px;
 }
 
-.wrapper {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.listings {
-  list-style-type: none;
-}
-
 .nav-toggle:checked ~ nav {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
@@ -810,4 +821,13 @@ nav a:focus {
   nav a {
     opacity: 1;
   }
+}
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.listings {
+  list-style-type: none;
 }
