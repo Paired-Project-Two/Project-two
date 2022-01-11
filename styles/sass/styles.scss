@@ -1,8 +1,8 @@
-@import "./partials/normalize";
-@import "./partials/form";
-@import './partials/base';
+@import './partials/normalize';
+@import './partials/form';
 @import './partials/nav';
 @import './partials/media-queries';
+@import './partials/base';
 @import './modules/colours';
 @import './modules/typography';
 
@@ -11,4 +11,45 @@
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Quattrocento', serif;
 
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body {
+  color: #233f57;
+  font-family: 'Montserrat', sans-serif;
+  background: #eee0cb;
+  line-height: 1.6;
+  font-size: .875rem;
+  margin: 0;
+  padding: 0;
+}
 
+h1, h3{
+font-family: 'Quattrocento', cursive; 
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+.listings {
+    list-style-type: none;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .wrapper {
+        width: 100%;
+    }
+}
