@@ -541,6 +541,10 @@ nav a:focus {
   transition: opacity 200ms ease-in-out 200ms;
 }
 
+.navMenu {
+  display: none;
+}
+
 @media (min-width: 800px) {
   .nav-toggle-label {
     display: none;
