@@ -31,7 +31,7 @@ nav li {
 nav a {
   text-transform: uppercase;
   // font-size: 1.2rem;
-  color: #233f57;
+  color: $indigo;
   text-decoration: none;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
@@ -63,7 +63,7 @@ nav a:focus
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: #233f57;
+  background: $indigo;
   height: 2px;
   width: 2em;
   border-radius: 2px;
