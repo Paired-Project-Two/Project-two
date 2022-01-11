@@ -245,7 +245,7 @@ template {
 form {
   width: 80%;
   margin: 0 auto;
-  border: 2px solid #233F57;
+  border: 2px solid #233f57;
   padding: 10px 20px;
   background: rgba(184, 219, 244, 0.6);
   text-align: center;
@@ -264,12 +264,12 @@ form h3 {
   margin: 5px auto;
   margin-top: 10px;
   padding: 2px;
-  background: #B8DBF4;
+  background: #b8dbf4;
   color: black;
   font-family: "Quattrocento", serif;
 }
 form select {
-  background: #B8DBF4;
+  background: #b8dbf4;
   padding: 10px 0;
   border: 3px solid #4F5D75;
   text-align: center;
@@ -334,7 +334,7 @@ p {
 }
 
 .singleSelect label {
-  background: #233F57;
+  background: #233f57;
   color: lightgrey;
 }
 
@@ -383,7 +383,7 @@ p {
   position: relative;
   border: 5px solid black;
   width: 23%;
-  background: #233F57;
+  background: #233f57;
   color: white;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -395,10 +395,6 @@ p {
 .cityDiv:hover {
   background: #4F5D75;
   color: white;
-}
-
-input[type=radio]:checked {
-  border: 0;
 }
 
 @media (max-width: 1200px) {
@@ -427,6 +423,11 @@ input[type=radio]:checked {
   }
 
   .cityDiv {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .singleSelect, .singleSelect label {
     width: 100%;
   }
 }
@@ -505,8 +506,105 @@ nav a:focus {
   color: #000;
 }
 
-.nav-toggle {
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: #233f57;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+.navTransition {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease-in-out 200ms;
+  transition: opacity 200ms ease-in-out 200ms;
+}
+
+.navMenu {
   display: none;
+}
+
+header {
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #233f57;
+  text-decoration: none;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #000;
 }
 
 .nav-toggle-label {
@@ -548,7 +646,7 @@ nav a:focus {
   top: 7px;
 }
 
-.nav-toggle:checked ~ nav {
+.navTransition {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
@@ -557,6 +655,10 @@ nav a:focus {
   opacity: 1;
   -webkit-transition: opacity 200ms ease-in-out 200ms;
   transition: opacity 200ms ease-in-out 200ms;
+}
+
+.navMenu {
+  display: none;
 }
 
 @media (min-width: 800px) {
@@ -603,5 +705,54 @@ nav a:focus {
 
   nav a {
     opacity: 1;
+  }
+}
+@media (min-width: 500px) {
+  .navMenu {
+    display: inline;
+  }
+}
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  color: #233f57;
+  font-family: "Montserrat", sans-serif;
+  background: #eee0cb;
+  line-height: 1.6;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3 {
+  font-family: "Quattrocento", cursive;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.listings {
+  list-style-type: none;
+}
+
+footer {
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    width: 100%;
   }
 }

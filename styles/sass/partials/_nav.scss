@@ -44,7 +44,7 @@ nav a:focus
 }
 
 .nav-toggle {
-  display: none;
+  // display: none;
 }
 
 
@@ -63,7 +63,7 @@ nav a:focus
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: #233f57;
+  background: $indigo;
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -75,6 +75,7 @@ nav a:focus
   content: '';
   position: absolute;
 }
+
 .nav-toggle-label span::before{
   bottom: 7px;
 }
@@ -83,7 +84,7 @@ nav a:focus
   top: 7px;
 }
 
-.nav-toggle:checked ~ nav {
+.navTransition {
   // display: block;
   transform: scale(1, 1);
 }
@@ -92,4 +93,8 @@ nav a:focus
   opacity: 1;
   transition: opacity 200ms ease-in-out 200ms;
 
+}
+
+.navMenu {
+  display: none;
 }

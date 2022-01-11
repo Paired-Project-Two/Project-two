@@ -3,6 +3,7 @@ const jobApp = {};
 jobApp.init = function () {
   //jobApp.grabData();
   jobApp.captureUserInput();
+  jobApp.mobileMenu();
 };
 const submitButton = document.querySelector(".searchButton");
 const category = document.querySelector(".jobCategory");
@@ -109,5 +110,18 @@ jobApp.filterResults = (results) => {
 // console.log(listingsObjects)
 
 // }
+
+jobApp.mobileMenu = () => {
+  const navMenu = document.querySelector('.navMenu');
+  const navToggle = document.querySelector('.nav-toggle-label');
+
+  const navBar = document.querySelector('nav');
+
+  navMenu.addEventListener('click', () => {
+    // navBar.classList.toggle('navTransition')
+    console.log("hi")
+  })
+
+}
 
 jobApp.init();
