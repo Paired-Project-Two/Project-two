@@ -596,13 +596,10 @@ template {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
 .hidden {
   visibility: hidden;
 }
 
->>>>>>> 0a913d414a7d4ed148fcbabdfdf017924e1d1bb5
 .wrapper {
   width: 80%;
   max-width: 1200px;
