@@ -1,20 +1,14 @@
 @import "./partials/normalize";
 @import "./partials/form";
-@import './partials/all';
-@import './modules/all';
+@import './partials/base';
+@import './partials/nav';
+@import './partials/media-queries';
+@import './modules/colours';
+@import './modules/typography';
 
 // font families 
 // font-family: 'EB Garamond', serif;
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Quattrocento', serif;
 
-.wrapper {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.listings {
-    list-style-type: none;
-}
 
