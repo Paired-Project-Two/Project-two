@@ -245,7 +245,7 @@ template {
 form {
   width: 80%;
   margin: 0 auto;
-  border: 2px solid #233F57;
+  border: 2px solid #233f57;
   padding: 10px 20px;
   background: rgba(184, 219, 244, 0.6);
   text-align: center;
@@ -264,12 +264,12 @@ form h3 {
   margin: 5px auto;
   margin-top: 10px;
   padding: 2px;
-  background: #B8DBF4;
+  background: #b8dbf4;
   color: black;
   font-family: "Quattrocento", serif;
 }
 form select {
-  background: #B8DBF4;
+  background: #b8dbf4;
   padding: 10px 0;
   border: 3px solid #4F5D75;
   text-align: center;
