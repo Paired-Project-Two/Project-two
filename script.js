@@ -21,31 +21,31 @@ jobApp.captureUserInput = () => {
     console.log(levelChoice);
     
     if (categoryChoice === "null") {
-      document.querySelector("#category_error").style.display = "block";
+      document.querySelector("#categoryError").style.display = "block";
       categoryError = "Please select a category";
-      document.getElementById("category_error").innerHTML = categoryError;
+      document.getElementById("categoryError").innerHTML = categoryError;
       formError = "Search missing information, please review selections";
-      document.getElementById("form_error").innerHTML = formError;
+      document.getElementById("formError").innerHTML = formError;
       return;
     } else {
       formApproved = "";
-      document.getElementById("location_error").innerHTML = formApproved;
-      document.getElementById("form_error").innerHTML = formApproved;
-      document.getElementById("category_error").innerHTML = formApproved;
+      document.getElementById("locationError").innerHTML = formApproved;
+      document.getElementById("formError").innerHTML = formApproved;
+      document.getElementById("categoryError").innerHTML = formApproved;
     }
 
     if (cityChoice === null) {
       
       cityError = "Please select a city";
-      document.getElementById("location_error").innerHTML = cityError;
+      document.getElementById("locationError").innerHTML = cityError;
       formError = "Search missing information, please review selections";
-      document.getElementById("form_error").innerHTML = formError;
+      document.getElementById("formError").innerHTML = formError;
       return; 
     } else {
         formApproved = "";
-        document.getElementById("location_error").innerHTML = formApproved;
-        document.getElementById("form_error").innerHTML = formApproved;
-        document.getElementById("category_error").innerHTML = formApproved; 
+        document.getElementById("locationError").innerHTML = formApproved;
+        document.getElementById("formError").innerHTML = formApproved;
+        document.getElementById("categoryError").innerHTML = formApproved; 
     }
     console.log(cityChoice.value)
     const emptyDiv = "";
