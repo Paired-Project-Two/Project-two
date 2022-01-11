@@ -31,7 +31,7 @@ nav li {
 nav a {
   text-transform: uppercase;
   // font-size: 1.2rem;
-  color: #233f57;
+  color: $indigo;
   text-decoration: none;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
@@ -95,6 +95,3 @@ nav a:focus
 
 }
 
-.navMenu {
-  display: none;
-}

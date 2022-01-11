@@ -2,8 +2,6 @@
 @import './modules/typography';
 @import "./partials/normalize";
 @import "./partials/form";
-@import './partials/base';
-@import './partials/nav';
 @import './partials/nav';
 @import './partials/media-queries';
 
@@ -26,6 +24,7 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
 body {
   color: $indigo;
   font-family: 'Montserrat', sans-serif;
