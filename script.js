@@ -57,7 +57,7 @@ jobApp.captureUserInput = () => {
 jobApp.insertUserInput = (category, level, city) => {
   jobApp.proxiedUrl = `https://www.themuse.com/api/public/jobs?page=1&category=${category}&location=${city}&level=${level}&descending=`;
 
-  const url = new URL("http://proxy.hackeryou.com");
+  const url = new URL("https://proxy.hackeryou.com");
   url.search = new URLSearchParams({
     reqUrl: jobApp.proxiedUrl,
     "params[key]":
