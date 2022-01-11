@@ -35,7 +35,7 @@ fieldset {
 form {
     width: 80%;
     margin: 0 auto;
-    border: 2px solid #233F57;
+    border: 2px solid $indigo;
     padding: 10px 20px;
     background: rgb(184, 219,244, 0.6);
     text-align: center;
@@ -53,14 +53,14 @@ form {
     margin: 5px auto;
     margin-top: 10px;
     padding: 2px;
-    background: #B8DBF4;
+    background: $blue;
     color: black;
     font-family: 'Quattrocento', serif;
     }
     select { 
-    background: #B8DBF4;
+    background: $blue;
     padding: 10px 0;
-    border: 3px solid #4F5D75;
+    border: 3px solid $independence;
     text-align: center;
     margin: 15px auto;
     border-radius: 2%;
@@ -112,7 +112,7 @@ p {
 }
 
 .singleSelect label {
-    background: #233F57;
+    background: $indigo;
     color: lightgrey; 
 }
 
@@ -154,7 +154,7 @@ p {
     position: relative;
     border: 5px solid black;
     width: 23%;
-    background: #233F57;
+    background: $indigo;
     color: white;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -164,7 +164,7 @@ p {
         margin: 0 auto;
     }
     &:hover {
-        background: #4F5D75;
+        background: $independence;
         color: white;
     }
 }
