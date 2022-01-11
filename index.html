@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>TechOccupy</title>
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,123 +12,131 @@
     rel="stylesheet">
 </head>
 <body>
-  
-  <header>
-    <div class="wrapper">
-      <div class="header-section">
-        <h1 class="logo">FunEmployed </h1>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Job Search</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <section class="formSection">
-    <div class="wrapper">
-      <h2>Designed To Find Your Dream Position</h2>
-      <h3>Over 4500 Tech Industry Listings</h3>
-      <form action="">
-        <div class="selectBars">
-          <span class="error">
-            <p id="category_error"></p>
-          </span>
-          <div class="singleSelect">
-            
-            <label for="job-category" class="sr-only">Industry Category</label>
-            <select class="jobCategory" name="job-category" id="job-category">
-              <option value="null">Industry Category</option>
-              <option value="Software Engineer">Software Engineer</option>
-              <option value="Data Science"> Data Science</option>
-              <option value="UX">UX</option>   
-              <option value="IT">IT</option> 
-              <option value="Product">Product</option>        
-            </select>
-           
-          </div>
-        
-          <div class="singleSelect">
-            <label for="job-experience" class="sr-only">Job Experience</label>
-            <select name="job-experience" id="job-experience" class="userLevel" >
-              <option value="null">Experience Level</option>
-              <option value="Entry%20Level">Entry Level</option>
-              <option value="Mid%20Level">Mid Level</option>
-              <option value="Senior%20Level">Senior Level</option>          
-            </select>
-            
-          </div>
-        </div>
-
-        <h3 class="sr-only">Location</h3>
-        <div class="locationDiv">
-
-          <div class="cityDiv">
-            <label for="cityChoice1">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Pollobarca-15051912-2cr_%2817509453180%29.jpg/1200px-Pollobarca-15051912-2cr_%2817509453180%29.jpg" alt="City of Toronto skyline" class="cityImg">
-              <p>Toronto, Canada</p>
-              <input type="radio" name="city" id="cityChoice1" value="Toronto%2C%20Canada" class="city"></input>
+  <main>
+    <header>
+      <div class="wrapper">
+        <div class="header-section">
+          <h1 class="logo">TechOccupy</h1>
+         
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="navToggle" class="nav-toggle-label">
+              <span></span>
             </label>
-          </div>
-
-          <div class="cityDiv">
-            <label for="cityChoice2">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg/1000px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg" alt="City of London skyline" class="cityImg">
-              <p>London, UK </p>
-              <input type="radio" name="city" id="cityChoice2" value="London%2C%20United%20Kingdom" class="city"></input>
-            </label>
-          </div>
           
-          <div class="cityDiv">
-            <label for="cityChoice3">
-              <img
-              src="https://openviewpartners.com/wp-content/uploads/2018/08/Silicon-Valley.png"
-              alt="City of San Jose skyline" class="cityImg">
-              <p>San Jose, CA</p>
-              <input type="radio" name="city" id="cityChoice3" value="San%20Jose%2C%20CA" class="city"></input>
-            </label>
-          </div>
-
-          <div class="cityDiv">
-            <label for="cityChoice4">
-              <img src="https://images.unsplash.com/photo-1570304816841-906a17d7b067?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmV3JTIweW9yayUyMHNreWxpbmV8ZW58MHx8MHx8&w=1000&q=80" alt="City of New York skyline" class="cityImg">
-              <p>New York, NY</p>
-              <input type="radio" name="city" id="cityChoice4" value="New%20York%2C%20NY" class="city" required></input>
-            </label>
-          </div>
-          <span class="error">
-            <p id="location_error"></p>
-          </span>
+          <nav role="navigation">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Job Search</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
         </div>
+      </div>
+    </header>
 
-        <input type="button" value="Search for Jobs" class="searchButton"></input>
-        <span class="error">
-          <p id="form_error"></p>
-        </span>
-      </form>
+    <section class="formSection">
+      <div class="wrapper">
+        <h2>Designed To Find Your Dream Position</h2>
+        <h3>Over 4500 Tech Industry Listings</h3>
+        <form action="">
+          <div class="selectBars">
+            <span class="error">
+              <p id="categoryError"></p>
+            </span>
+            <div class="singleSelect">
+              
+              <label for="jobCategory" class="sr-only">Industry Category</label>
+              <select class="jobCategory" name="jobCategory" id="jobCategory">
+                <option value="null">Industry Category</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Data Science"> Data Science</option>
+                <option value="UX">UX</option>   
+                <option value="IT">IT</option> 
+                <option value="Product">Product</option>        
+              </select>
+            
+            </div>
+          
+            <div class="singleSelect">
+              <label for="jobExperience" class="sr-only">Job Experience</label>
+              <select name="jobExperience" id="jobExperience" class="userLevel" >
+                <option value="null">Experience Level</option>
+                <option value="Entry%20Level">Entry Level</option>
+                <option value="Mid%20Level">Mid Level</option>
+                <option value="Senior%20Level">Senior Level</option>          
+              </select>
+              
+            </div>
+          </div>
 
-      
+          <h3 class="sr-only">Location</h3>
+          <div class="locationDiv">
+            
+            <div class="cityDiv">
+              <label for="cityChoice1">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Pollobarca-15051912-2cr_%2817509453180%29.jpg/1200px-Pollobarca-15051912-2cr_%2817509453180%29.jpg" alt="City of Toronto skyline" class="cityImg">
+                <p>Toronto, Canada</p>
+                <input type="radio" name="city" id="cityChoice1" value="Toronto%2C%20Canada" class="city"></input>
+              </label>
+            </div>
 
-    </div>
-  </section>
+            <div class="cityDiv">
+              <label for="cityChoice2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg/1000px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg" alt="City of London skyline" class="cityImg">
+                <p>London, UK </p>
+                <input type="radio" name="city" id="cityChoice2" value="London%2C%20United%20Kingdom" class="city"></input>
+              </label>
+            </div>
+            
+            <div class="cityDiv">
+              <label for="cityChoice3">
+                <img
+                src="https://openviewpartners.com/wp-content/uploads/2018/08/Silicon-Valley.png"
+                alt="City of San Jose skyline" class="cityImg">
+                <p>San Jose, CA</p>
+                <input type="radio" name="city" id="cityChoice3" value="San%20Jose%2C%20CA" class="city"></input>
+              </label>
+            </div>
 
-  <section class="resultsSection">
-    <div class="results">
-      <ul class="listings">
-    
-      </ul>
-    </div>
-  </section>
+            <div class="cityDiv">
+              <label for="cityChoice4">
+                <img src="https://images.unsplash.com/photo-1570304816841-906a17d7b067?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmV3JTIweW9yayUyMHNreWxpbmV8ZW58MHx8MHx8&w=1000&q=80" alt="City of New York skyline" class="cityImg">
+                <p>New York, NY</p>
+                <input type="radio" name="city" id="cityChoice4" value="New%20York%2C%20NY" class="city" required></input>
+              </label>
+            </div>
+            
+            <span class="error">
+              <p id="location_error"></p>
+            </span>
+          </div>
 
+          <input type="button" value="Search for Jobs" class="searchButton"></input>
+          <span class="error">
+            <p id="form_error"></p>
+          </span>
+        </form>
 
+        
+
+      </div>
+    </section>
+
+    <section class="resultsSection">
+      <div class="wrapper">
+        <div class="results">
+          <ul class="listings">
+        
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
   <script src="./script.js"></script>
+  <footer>
+    <p>Copyright &copy; 2022 Juno College</p>
+  </footer>
 </body>
 </html>

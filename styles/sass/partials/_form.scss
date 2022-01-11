@@ -3,19 +3,30 @@
     background: url("https://cdn.pixabay.com/photo/2017/08/01/00/38/man-2562325_960_720.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-blend-mode: hue; 
     padding: 100px 0 100px 0; 
+}
+fieldset {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 21px;
+  padding-bottom: 10.5px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
 }
 .formSection h2,
 .formSection h3 {
     text-align: center;
-    color: white;
+    color: #000000;
     padding: 0;
     margin: 5px 0;
 }
 
 .formSection h2 {
     font-size: 20px;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 .formSection h3 {
     font-size: 18px;
@@ -122,7 +133,7 @@ p {
     margin: 0 auto;
     padding: 10px 10px;
     background: grey;
-    color: white;
+    color: black;
     border: 2px solid black;
     border-radius: 2%;
     width: 96%;
@@ -130,6 +141,7 @@ p {
 }
 .searchButton:hover {
     background: black;
+    color: white;
 }
 .cityImg {
     width: 100%;
@@ -155,11 +167,8 @@ p {
         background: #4F5D75;
         color: white;
     }
-    
 }
-input[type="radio"]:checked  {
-    border: 0;
-}
+
 @media (max-width: 1200px) {
     .selectBars {
         flex-direction: column;
@@ -179,4 +188,10 @@ input[type="radio"]:checked  {
     .cityDiv {
         width: 100%;
     }
+}
+@media (max-width: 750px) {
+    .singleSelect, .singleSelect label {
+        width: 100%;
+    }
+
 }

@@ -1,10 +1,9 @@
-@import './partials/normalize';
-@import './partials/form';
-@import './partials/nav';
-@import './partials/media-queries';
-@import './partials/base';
+@import "./partials/normalize";
+@import "./partials/form";
 @import './modules/colours';
 @import './modules/typography';
+@import './partials/nav';
+@import './partials/media-queries';
 
 // font families 
 // font-family: 'EB Garamond', serif;
@@ -16,6 +15,7 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
 body {
   color: #233f57;
   font-family: 'Montserrat', sans-serif;
