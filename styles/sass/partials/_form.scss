@@ -44,7 +44,7 @@ form {
     padding: 2px;
     background: $blue;
     color: black;
-    font-family: 'Quattrocento', serif;
+    font-family: $ff-titles;
     }
     select { 
     background: $blue;
@@ -53,7 +53,7 @@ form {
     text-align: center;
     margin: 15px auto;
     border-radius: 2%;
-    font-family: 'Quattrocento', serif;
+    font-family: $ff-titles;
     &:hover {
         background: black;
         color: white;
@@ -62,14 +62,14 @@ form {
 }
 
 label {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $ff-body;
     font-size: 16px;  
     
 }
 h3, 
 label,
 p {
-    font-family: 'Quattrocento', serif;
+    font-family: $ff-titles;
 }
 
 .selectBars {
@@ -126,7 +126,7 @@ p {
     border: 2px solid black;
     border-radius: 2%;
     width: 96%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $ff-body;
 }
 .searchButton:hover {
     background: black;
