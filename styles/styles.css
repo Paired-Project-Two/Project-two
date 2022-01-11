@@ -217,6 +217,10 @@ template {
   overflow: hidden;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .formSection {
   background: url("https://cdn.pixabay.com/photo/2017/08/01/00/38/man-2562325_960_720.jpg");
   background-size: cover;
@@ -492,7 +496,11 @@ nav a:focus {
   color: #000;
 }
 
-.nav-toggle-label {
+.navToggle {
+  display: none;
+}
+
+.navToggleLabel {
   position: absolute;
   top: 0;
   left: 0;
@@ -506,9 +514,9 @@ nav a:focus {
           align-items: center;
 }
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.navToggleLabel span,
+.navToggleLabel span::before,
+.navToggleLabel span::after {
   display: block;
   background: #233f57;
   height: 2px;
@@ -517,33 +525,29 @@ nav a:focus {
   position: relative;
 }
 
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.navToggleLabel span::before,
+.navToggleLabel span::after {
   content: "";
   position: absolute;
 }
 
-.nav-toggle-label span::before {
+.navToggleLabel span::before {
   bottom: 7px;
 }
 
-.nav-toggle-label span::after {
+.navToggleLabel span::after {
   top: 7px;
 }
 
-.navTransition {
+.navToggle:checked ~ nav {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav a {
+.navToggle:checked ~ nav a {
   opacity: 1;
   -webkit-transition: opacity 200ms ease-in-out 200ms;
   transition: opacity 200ms ease-in-out 200ms;
-}
-
-.navMenu {
-  display: none;
 }
 
 @media (min-width: 800px) {
@@ -815,13 +819,10 @@ template {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
 .hidden {
   visibility: hidden;
 }
 
->>>>>>> 0a913d414a7d4ed148fcbabdfdf017924e1d1bb5
 .wrapper {
   width: 80%;
   max-width: 1200px;
