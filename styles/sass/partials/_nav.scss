@@ -44,10 +44,12 @@ nav a:focus
   color: #000;
 }
 
+.navToggle {
+  display: none;
+}
 
 
-
-.nav-toggle-label {
+.navToggleLabel {
   position: absolute;
   top: 0;
   left: 0;
@@ -58,9 +60,9 @@ nav a:focus
   align-items: center;
 }
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.navToggleLabel span,
+.navToggleLabel span::before,
+.navToggleLabel span::after {
   display: block;
   background: $indigo;
   height: 2px;
@@ -69,30 +71,26 @@ nav a:focus
   position: relative;
 }
 
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.navToggleLabel span::before,
+.navToggleLabel span::after {
   content: '';
   position: absolute;
 }
-
-.nav-toggle-label span::before{
+.navToggleLabel span::before{
   bottom: 7px;
 }
 
-.nav-toggle-label span::after {
+.navToggleLabel span::after {
   top: 7px;
 }
 
-.navTransition {
+.navToggle:checked ~ nav {
   // display: block;
   transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav a {
+.navToggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 200ms ease-in-out 200ms;
-}
 
-.navMenu {
-  display: none;
 }
