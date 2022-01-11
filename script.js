@@ -119,7 +119,7 @@ jobApp.mobileMenu = () => {
 
   navMenu.addEventListener('click', () => {
     // navBar.classList.toggle('navTransition')
-    console.log("hi")
+    // console.log("hi")
   })
 
 }
