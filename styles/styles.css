@@ -271,7 +271,7 @@ form h3 {
 form select {
   background: #b8dbf4;
   padding: 10px 0;
-  border: 3px solid #4F5D75;
+  border: 3px solid #4f5d75;
   text-align: center;
   margin: 15px auto;
   border-radius: 2%;
@@ -334,7 +334,7 @@ p {
 }
 
 .singleSelect label {
-  background: #233F57;
+  background: #233f57;
   color: lightgrey;
 }
 
@@ -383,7 +383,7 @@ p {
   position: relative;
   border: 5px solid black;
   width: 23%;
-  background: #233F57;
+  background: #233f57;
   color: white;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -393,7 +393,7 @@ p {
   margin: 0 auto;
 }
 .cityDiv:hover {
-  background: #4F5D75;
+  background: #4f5d75;
   color: white;
 }
 
