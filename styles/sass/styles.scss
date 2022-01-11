@@ -1,6 +1,5 @@
 @import './modules/colours';
 @import './modules/typography';
-@import "./partials/normalize";
 @import "./partials/form";
 @import './partials/nav';
 @import './partials/media-queries';
@@ -27,7 +26,7 @@
 
 body {
   color: $indigo;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $ff-body;
   background: $champagne;
   line-height: 1.6;
   font-size: .875rem;
@@ -36,7 +35,7 @@ body {
 }
 
 h1, h3{
-font-family: 'Quattrocento', cursive; 
+font-family: $ff-titles; 
 }
 
 h1 {
